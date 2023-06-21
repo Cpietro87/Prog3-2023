@@ -1,25 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {EjeReducer} from "./compontes/EjeReducer";
+import { EjeEffect } from "./compontes/EjeUseEffect";
+import { Counter } from "./compontes/EjeUseState";
+import CheckBox from "./compontes/widgets/CheckBox";
+import RadioButton from "./compontes/widgets/RadioButton";
+
+
+
 
 function App() {
+  const options = ['Option 1', 'Option 2', 'Option 3'];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>React + TypeScript</h1>
+      <hr/>
+
+      <h2>useState</h2>
+      <hr/>
+      <Counter/>
+      <h2>useEffect</h2>
+      <hr/>
+      <EjeEffect/>
+      <h2>useReducer</h2>
+      <hr/>
+      <EjeReducer/>
+      <h2>Check Box</h2>
+      <hr/>
+      <CheckBox label="Mujer"/>
+      <CheckBox label="Varon"/>
+      <h2>Radio Button</h2>
+      <hr/>
+      <RadioButton options={options}/>
+
+    </>
   );
 }
 
