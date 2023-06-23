@@ -1,6 +1,9 @@
 import {EjeReducer} from "./compontes/EjeReducer";
 import { EjeEffect } from "./compontes/EjeUseEffect";
 import { Counter } from "./compontes/EjeUseState";
+import ColorChanger from "./compontes/Ejercico";
+import { ColorChange } from "./compontes/HandleEvent";
+import { EjeProps } from "./compontes/Props";
 import CheckBox from "./compontes/widgets/CheckBox";
 import RadioButton from "./compontes/widgets/RadioButton";
 
@@ -14,7 +17,7 @@ function App() {
       <h1>React + TypeScript</h1>
       <hr/>
 
-      <h2>useState</h2>
+      {/* <h2>useState</h2>
       <hr/>
       <Counter/>
       <h2>useEffect</h2>
@@ -29,8 +32,14 @@ function App() {
       <CheckBox label="Varon"/>
       <h2>Radio Button</h2>
       <hr/>
-      <RadioButton options={options}/>
-
+      <RadioButton options={options}/> */}
+    <h2>Props</h2>
+    <hr/>
+    <EjeProps title="Prog3" subTitle={124}/>
+    <h2>Manejar evento</h2>
+    <hr/>
+    <ColorChange/>
+    <ColorChanger/>
     </>
   );
 }
