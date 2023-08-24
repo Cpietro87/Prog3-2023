@@ -8,11 +8,11 @@ import { EjeProps } from "./compontes/Props";
 import UserComponent from "./compontes/RendCondicional";
 import Toolbar from "./compontes/alert";
 import Estatua from "./compontes/object";
-import Form from "./compontes/stateInstance";
 import CheckBox from "./compontes/widgets/CheckBox";
 import RadioButton from "./compontes/widgets/RadioButton";
 import AutoComponent from "./compontes/widgets/Tp/tp2";
 import  Chat  from "./compontes/Chat";
+import Contador from "./compontes/InstanciaEstado";
 
 
 
@@ -25,14 +25,15 @@ function App() {
     <>
       <h1>React + TypeScript</h1>
       <hr/>
-    <h2>Manejar evento</h2>
-    <hr/>
-    <UserComponent/>
-    <hr/>
-    <Gallery/>
-    <hr/>
-    <Chat/>
+      <h2>Manejar evento</h2>
+      <hr/>
+      <UserComponent/>
+      <hr/>
+      <Gallery/>
+      <hr/>
+      <Contador/>
     </>
+    
   );
 }
 
