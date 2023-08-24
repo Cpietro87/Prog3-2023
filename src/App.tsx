@@ -6,9 +6,13 @@ import ColorChanger from "./compontes/Ejercico";
 import { ColorChange } from "./compontes/HandleEvent";
 import { EjeProps } from "./compontes/Props";
 import UserComponent from "./compontes/RendCondicional";
+import Toolbar from "./compontes/alert";
+import Estatua from "./compontes/object";
+import Form from "./compontes/stateInstance";
 import CheckBox from "./compontes/widgets/CheckBox";
 import RadioButton from "./compontes/widgets/RadioButton";
 import AutoComponent from "./compontes/widgets/Tp/tp2";
+import  Chat  from "./compontes/Chat";
 
 
 
@@ -26,6 +30,8 @@ function App() {
     <UserComponent/>
     <hr/>
     <Gallery/>
+    <hr/>
+    <Chat/>
     </>
   );
 }
