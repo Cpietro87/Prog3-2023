@@ -1,21 +1,27 @@
-import { useState } from "react";
+import React, { useState } from 'react';
 
-export default function Contador() {
-  const [number, setNumber] = useState(0);
+export default function ToolBar() {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleImageUpload = () => {
+    setIsLoading(true);
+    // Simular una carga de imagen
+    setTimeout(() => {
+      setIsLoading(false);
+      alert('¡Imagen subida exitosamente!');
+    }, 2000); // Simulamos una carga de 2 segundos
+  };
 
   return (
-    <>
-      <h1>{number}</h1>
-      <button
-        onClick={() => {
-          setNumber(number + 1);
-          setNumber(number + 1);
-          setNumber(number + 1);
-        }}
-      >
-        +3
+    <div className="Toolbar">
+      <button onClick={() => alert('¡Reproduciendo!')}>
+        Reproducir película
       </button>
-    </>
+      <button onClick={handleImageUpload} disabled={isLoading}>
+        {isLoading ? 'Cargando...' : 'Subir imagen'}
+      </button>
+    </div>
   );
 }
+
 

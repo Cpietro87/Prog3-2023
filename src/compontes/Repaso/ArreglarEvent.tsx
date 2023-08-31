@@ -13,7 +13,7 @@ Sin embargo, nada pasa cuando lo cliqueas. Soluciona el problema.
     }
   
     return (
-      <button onClick={handleClick()}>
+      <button onClick={handleClick}>
         Alterna las luces
       </button>
     );

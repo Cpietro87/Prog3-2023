@@ -10,7 +10,7 @@ const Form: React.FC<FormProps> = () => {
     e.preventDefault();
     setTimeout(() => {
       alert(`Le dijiste ${message} a ${to}`);
-    }, 5000);
+    }, 3000);
   };
 
   return (
