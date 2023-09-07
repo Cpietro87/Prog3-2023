@@ -8,9 +8,9 @@ export default function InstanceCounter() {
         <h1>Poner en cola un estado</h1>
         <h2>{number}</h2>
         <button onClick={() => {
-          setNumber(number + 1);
-          setNumber(number + 1);
-          setNumber(number + 1);
+          setNumber(n => n + 1);
+          setNumber(n => n + 1);
+          setNumber(n => n + 1);
         }}>+3</button>
       </>
     )
