@@ -5,21 +5,26 @@ import Login from "./compontes/ReactRouter/Login";
 import IntanceState from "./compontes/IntanciaEstado/InstanciaEstado";
 import InstanceCounter from "./compontes/IntanciaEstado/InstanceCounter";
 import InstanceTime from "./compontes/IntanciaEstado/InstanceTime";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ProtectedRoute from "./compontes/ReactRouter/utils/ProtectedRoute";
+import { useLocalStorage } from "react-use";
 
 
 function App() {
 
-  const [path, setPath] = useState(window.location.pathname);
+  const [user, setUser] = useLocalStorage('user')
 
   return (
-   <main>
-    {path === '/instance' && <IntanceState/>}
-    {path === '/instancecounter' && <InstanceCounter/>}
-    {path === '/instancetiemer' && <InstanceTime/>}
-    {path === '/' && <Home/>}
-    {path === '/about' && <About/>}
-    {path === '/login' && <Login/>}
-   </main>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<ProtectedRoute canActivate={user} redirectPath="/login"/>}>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+        </Route>
+        <Route path="/login" element={<Login/>}/>
+      </Routes>
+    </BrowserRouter>
+  
   );
 }
 
