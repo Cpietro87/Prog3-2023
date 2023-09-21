@@ -1,12 +1,12 @@
 import { useState } from "react";
-import Home from "./compontes/ReactRouter/Home";
-import About from "./compontes/ReactRouter/About";
-import Login from "./compontes/ReactRouter/Login";
-import IntanceState from "./compontes/IntanciaEstado/InstanciaEstado";
-import InstanceCounter from "./compontes/IntanciaEstado/InstanceCounter";
-import InstanceTime from "./compontes/IntanciaEstado/InstanceTime";
+import Home from "./components/ReactRouter/Home";
+import About from "./components/ReactRouter/About";
+import Login from "./components/ReactRouter/Login";
+import IntanceState from "./components/IntanciaEstado/InstanciaEstado";
+import InstanceCounter from "./components/IntanciaEstado/InstanceCounter";
+import InstanceTime from "./components/IntanciaEstado/InstanceTime";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ProtectedRoute from "./compontes/ReactRouter/utils/ProtectedRoute";
+import ProtectedRoute from "./components/ReactRouter/utils/ProtectedRoute";
 import { useLocalStorage } from "react-use";
 
 
